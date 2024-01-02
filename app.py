@@ -141,13 +141,13 @@ def login_to_facebook(App_name,restuarant_name,location,nature_of_cuisine,occasi
 
 
     #image generation
-    image_urls= image_generator(other_keywords)
+    #image_urls= image_generator(other_keywords)
 
 
     # Display all images with buttons
-    for i, image_url in enumerate(image_urls):
-        st.image(image_url, caption=f'Image {i + 1}', use_column_width=True, width=200)
-    selected_image_index = st.text_input("Enter the image you want to choose (e.g., 1)",key="selected image")
+    #for i, image_url in enumerate(image_urls):
+        #st.image(image_url, caption=f'Image {i + 1}', use_column_width=True, width=200)
+    #selected_image_index = st.text_input("Enter the image you want to choose (e.g., 1)",key="selected image")
     #upload image
     uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
