@@ -31,12 +31,13 @@ import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-def install_chrome():
-    os.system('sbase install chromebrowser')
-    os.system('ln -s /home/appuser/venv/lib/python3.7/site-packages/seleniumbase/browsers/chromebrowser /home/appuser/venv/bin/chromebrowser')
+def installff():
+  os.system('sbase install chrome ')
+  os.system('ln -s /home/appuser/venv/lib/python3.7/site-packages/seleniumbase/drivers/chrome  /home/appuser/venv/bin/chrome ')
 
-# Install Chrome browser
-_ = install_chrome()
+_ = installff()
+
+
 
 # Set up Chrome options
 chrome_options = Options()
