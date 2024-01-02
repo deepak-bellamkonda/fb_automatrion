@@ -63,7 +63,7 @@ browser = webdriver.Chrome(options=chrome_options)
 #browser = webdriver.Firefox(options=opts)
 #browser= webdriver.Chrome(options=opts)
 
-browser = webdriver.Chrome(options=opts)
+#browser = webdriver.Chrome(options=opts)
 
 OPENAI_API_KEY = "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"
 
