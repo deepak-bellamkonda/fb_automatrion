@@ -76,13 +76,13 @@ def get_browser():
     global browser
     return browser
 
-@st.cache_data
+
 def validate_user_credentials(username, password):
     # Replace this with your validation logic
     return username == "Skepitglobal" and password == "Skepitglobal"
 
 
-@st.cache_data
+
 def content_generator(restuarant_name, location, nature_of_cuisine, occasion, offer):
     prompt = f"You are a prompt engineering assistant. Create a Facebook post for resturant {restuarant_name} at location {location} and my nature of cuisine is {nature_of_cuisine} for the {occasion} occasion and we are giving flat {offer} discount  and add relevant tags. Generate content without user involvement and limit to 50 words"
     #Generate content for the Facebook post using GPT-3.5 Turbo
@@ -99,7 +99,7 @@ def content_generator(restuarant_name, location, nature_of_cuisine, occasion, of
     return content
     #modified_content=st.text_area("Generated Facebook Post Content", content)
     
-@st.cache_data
+
 def image_generator(other_keywords):
     api_key = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjBhOTBhZWVhZWRjYjk5ZGVjNWE4YzgyOGNiNDZjZDQwIiwiY3JlYXRlZF9hdCI6IjIwMjMtMTItMjVUMTY6MTg6MDQuNTczNDMyIn0.8Ku0_-xJ0a7Ug79HvzsecIG_iakmH2VXdZzC7c0SE8o'  # Your API key here
     monster_client = client(api_key)
@@ -120,7 +120,7 @@ def image_generator(other_keywords):
     #image_urls = ["https://www.simplilearn.com/ice9/free_resources_article_thumb/Coca_Cola_Marketing_Strategy_2022.jpg"]
     return image_urls
 
-@st.cache_data
+
 def save_uploaded_file(uploaded_file):
     temp_dir = tempfile.gettempdir()
     file_path = os.path.join(temp_dir, uploaded_file.name)
@@ -368,7 +368,7 @@ def login_to_facebook(App_name,restuarant_name,location,nature_of_cuisine,occasi
                     
     return browser, selected_profile
 
-@st.cache_data
+
 def app_creation(username, password, App_name):
 #facebook login
     selected_profile = None  # Assign a default value
@@ -767,7 +767,7 @@ def post_to_facebook_demo_schedule_file_upload(access_token, page_id, message, i
     
     
                                     
-@st.cache_data
+
 def post_to_facebook_demo_schedule_image_url(access_token, page_id, message, image_path, scheduled_datetime, selected_timezone):
     graph = facebook.GraphAPI(access_token)
 
@@ -799,7 +799,7 @@ def post_to_facebook_demo_schedule(access_token, page_id, message, image_path, s
     
             
             
-@st.cache_data
+
 def login_to_facebook_existing_user(App_name,restuarant_name,location,nature_of_cuisine,occasion,offer,other_keywords):
     global browser
 
@@ -935,7 +935,7 @@ def initialize_user_data():
         user_data.to_excel("user_data.xlsx", index=False)
     return user_data
 
-@st.cache_data
+
 #posting to facebook page
 def post_to_facebook_demo(access_token, page_id, message, image_path):
     image_url = image_path
