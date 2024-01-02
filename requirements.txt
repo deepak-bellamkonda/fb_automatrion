@@ -8,5 +8,5 @@ numpy==1.26.2
 openai==1.6.1
 openpyxl==3.1.2
 schedule==1.2.1
-
+chromedriver-autoinstaller==0.6.3
 
