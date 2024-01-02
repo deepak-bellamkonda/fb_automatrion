@@ -66,8 +66,9 @@ browser = webdriver.Chrome(options=chrome_options)
 #browser = webdriver.Chrome(options=opts)
 
 #OPENAI_API_KEY = "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"
-openai.api_key = st.secrets['OPENAI_API_KEY']
-OPENAI_API_KEY=openai.api_key
+#openai.api_key = st.secrets['OPENAI_API_KEY']
+#OPENAI_API_KEY=openai.api_key
+openai_api_key = st.secrets['OPENAI_API_KEY']
 # Global variable to store the browser instance
 
 @st.cache_resource
@@ -85,7 +86,7 @@ def validate_user_credentials(username, password):
 def content_generator(restuarant_name, location, nature_of_cuisine, occasion, offer):
     prompt = f"You are a prompt engineering assistant. Create a Facebook post for resturant {restuarant_name} at location {location} and my nature of cuisine is {nature_of_cuisine} for the {occasion} occasion and we are giving flat {offer} discount  and add relevant tags. Generate content without user involvement and limit to 50 words"
     #Generate content for the Facebook post using GPT-3.5 Turbo
-    clientopenai = OpenAI(api_key=OPENAI_API_KEY)
+    clientopenai = OpenAI(api_key=openai_api_key)
     response = clientopenai.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
