@@ -152,7 +152,7 @@ def login_to_facebook(App_name,restuarant_name,location,nature_of_cuisine,occasi
 
     selected_profile = None  # Assign a default value
 
-    if st.toggle("Post to Facebook"):
+    if st.checkbox("Post to Facebook"):
         if selected_image_index:
             st.write("Posting images")
             if 1 <= int(selected_image_index) <= len(image_urls):
