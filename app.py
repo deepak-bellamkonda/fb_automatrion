@@ -65,8 +65,9 @@ browser = webdriver.Chrome(options=chrome_options)
 
 #browser = webdriver.Chrome(options=opts)
 
-OPENAI_API_KEY = "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"
-
+#OPENAI_API_KEY = "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"
+openai.api_key = st.secrets['OPENAI_API_KEY']
+OPENAI_API_KEY=openai.api_key
 # Global variable to store the browser instance
 
 @st.cache_resource
