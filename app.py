@@ -31,20 +31,16 @@ import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-def installff():
-  os.system('sbase install chrome ')
-  os.system('ln -s /home/appuser/venv/lib/python3.12/site-packages/seleniumbase/drivers/chrome  /home/appuser/venv/bin/chrome ')
+def setup_driver():
+    global driver
+    driver = webdriver.Chrome(options=options)
+    driver.maximize_window()
+    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    driver.execute_cdp_cmd('Network.setUserAgentOverride', {
+        "userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
 
-_ = installff()
 
-
-
-# Set up Chrome options
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument('--disable-notifications')
-chrome_options.add_argument('--no-sandbox') 
-browser = webdriver.Chrome(options=chrome_options)
+setup_driver()
 
 # Create a Chrome webdriver instance)
 
