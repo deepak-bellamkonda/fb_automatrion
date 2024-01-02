@@ -43,6 +43,7 @@ _ = installff()
 chrome_options = Options()
 chrome_options.add_argument("--headless")
 chrome_options.add_argument('--disable-notifications')
+chrome_options.add_argument('--no-sandbox') 
 browser = webdriver.Chrome(options=chrome_options)
 
 # Create a Chrome webdriver instance)
