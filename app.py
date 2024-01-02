@@ -33,7 +33,7 @@ from selenium.webdriver.chrome.options import Options
 
 def installff():
   os.system('sbase install chrome ')
-  os.system('ln -s /home/appuser/venv/lib/python3.7/site-packages/seleniumbase/drivers/chrome  /home/appuser/venv/bin/chrome ')
+  os.system('ln -s /home/appuser/venv/lib/python3.12/site-packages/seleniumbase/drivers/chrome  /home/appuser/venv/bin/chrome ')
 
 _ = installff()
 
