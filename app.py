@@ -71,7 +71,7 @@ browser = webdriver.Chrome(options=chrome_options)
 openai_api_key = st.secrets['OPENAI_API_KEY']
 # Global variable to store the browser instance
 
-@st.cache_resource
+
 def get_browser():
     global browser
     return browser
