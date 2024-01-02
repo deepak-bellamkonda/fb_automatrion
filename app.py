@@ -40,7 +40,7 @@ _ = install_chrome()
 
 # Set up Chrome options
 chrome_options = Options()
-#chrome_options.add_argument("--headless")
+chrome_options.add_argument("--headless")
 chrome_options.add_argument('--disable-notifications')
 
 # Create a Chrome webdriver instance)
