@@ -26,7 +26,7 @@ from selenium.webdriver import ChromeOptions
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 import chromedriver_autoinstaller
 
-OPENAI_API_KEY = "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" 
+openai.api_key = st.secrets['OPENAI_API_KEY'] 
 
 # Global variable to store the browser instance
 browser = None
