@@ -26,10 +26,15 @@ from selenium.webdriver import ChromeOptions
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 import chromedriver_autoinstaller
 
-openai.api_key = st.secrets['OPENAI_API_KEY'] 
-
+OPENAI_API_KEY = st.secrets['OPENAI_API_KEY'] 
+System.setProperty("webdriver.chrome.driver", webDriverExec)
+ChromeOptions chromeOptions = new ChromeOptions()
+chromeOptions.addArguments("--headless");
+chromeOptions.add_argument("--disable-notifications")
+chromeOptions.addArguments("window-size=1200,1100")
+browser = new ChromeDriver(chromeOptions)
 # Global variable to store the browser instance
-browser = None
+
 
 @st.cache_resource
 def get_browser():
@@ -313,9 +318,9 @@ def login_to_facebook(App_name,restuarant_name,location,nature_of_cuisine,occasi
 def app_creation(username, password, App_name):
     #facebook login
     selected_profile = None  # Assign a default value
-    chrome_driver_path = "C:\\Users\\srija\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe"
-    chrome_options = ChromeOptions()
-    chrome_options.add_argument("--disable-notifications")
+    #chrome_driver_path = "C:\\Users\\srija\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe"
+    #chrome_options = ChromeOptions()
+    
 
     service = Service(chrome_driver_path)
     browser = webdriver.Chrome(service=service, options=chrome_options)
