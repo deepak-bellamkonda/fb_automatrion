@@ -28,7 +28,7 @@ import chromedriver_autoinstaller
 
 OPENAI_API_KEY = st.secrets['OPENAI_API_KEY'] 
 System.setProperty("webdriver.chrome.driver", webDriverExec)
-ChromeOptions  = new ChromeOptions()
+ChromeOptions  = ChromeOptions()
 chromeOptions.addArguments("--headless");
 chromeOptions.add_argument("--disable-notifications")
 chromeOptions.addArguments("window-size=1200,1100")
