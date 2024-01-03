@@ -27,7 +27,6 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 import chromedriver_autoinstaller
 
 OPENAI_API_KEY = st.secrets['OPENAI_API_KEY'] 
-webdriver.ChromeOptions
 chrome_options = Options()
 
 # Add the "--headless" option to run Chrome in headless mode
