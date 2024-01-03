@@ -27,11 +27,15 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 import chromedriver_autoinstaller
 
 OPENAI_API_KEY = st.secrets['OPENAI_API_KEY'] 
-ChromeOptions  = ChromeOptions()
-ChromeOptions.addArguments("--headless");
-ChromeOptions.add_argument("--disable-notifications")
-ChromeOptions.addArguments("window-size=1200,1100")
-browser = ChromeDriver(ChromeOptions)
+webdriver.ChromeOptions
+chrome_options = Options()
+
+# Add the "--headless" option to run Chrome in headless mode
+chrome_options.add_argument("--headless")
+
+# Set the window size
+chrome_options.add_argument("window-size=1200,1100")
+browser = webdriver.Chrome(options=chrome_options)
 # Global variable to store the browser instance
 
 
