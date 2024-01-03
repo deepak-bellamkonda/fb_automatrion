@@ -27,11 +27,11 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 import chromedriver_autoinstaller
 
 OPENAI_API_KEY = st.secrets['OPENAI_API_KEY'] 
-chromeOptions  = ChromeOptions()
-chromeOptions.addArguments("--headless");
-chromeOptions.add_argument("--disable-notifications")
-chromeOptions.addArguments("window-size=1200,1100")
-browser = ChromeDriver(chromeOptions)
+ChromeOptions  = ChromeOptions()
+ChromeOptions.addArguments("--headless");
+ChromeOptions.add_argument("--disable-notifications")
+ChromeOptions.addArguments("window-size=1200,1100")
+browser = ChromeDriver(ChromeOptions)
 # Global variable to store the browser instance
 
 
