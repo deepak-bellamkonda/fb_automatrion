@@ -36,7 +36,7 @@ options.add_argument("--disable-gpu")
 options.add_argument("--disable-features=NetworkService")
 options.add_argument("--window-size=1920x1080")
 options.add_argument("--disable-features=VizDisplayCompositor")
-    return options
+
 
 browser = webdriver.Chrome(options=options)
 # Global variable to store the browser instance
