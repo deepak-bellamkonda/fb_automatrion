@@ -35,20 +35,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 # Set up Chrome options
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument('--disable-notifications')
-chrome_options.add_argument('--no-sandbox') 
-def setup_driver():
-    global driver
-    browser = webdriver.Chrome(options=chrome_options)
-    browser.maximize_window()
-    browser.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-    browser.execute_cdp_cmd('Network.setUserAgentOverride', {
-        "userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
 
-
-setup_driver()
 
 # Create a Chrome webdriver instance)
 
@@ -58,16 +45,16 @@ setup_driver()
 # os.system('ln -s /home/appuser/venv/lib/python3.7/site-packages/seleniumbase/browsers/geckobrowser /home/appuser/venv/bin/geckobrowser')
 
 #_ = installff()
-#from selenium import webdriver
-#from selenium.webdriver import FirefoxOptions
+from selenium import webdriver
+from selenium.webdriver import ChromeOptions
 #opts = FirefoxOptions()
-#opts = ChromeOptions()
+opts = ChromeOptions()
 
 
-#opts.add_argument("--headless")
-#opts.add_argument('--disable-notifications')
+opts.add_argument("--headless")
+opts.add_argument('--disable-notifications')
 #browser = webdriver.Firefox(options=opts)
-#browser= webdriver.Chrome(options=opts)
+browser= webdriver.Chrome(options=opts)
 
 #browser = webdriver.Chrome(options=opts)
 
