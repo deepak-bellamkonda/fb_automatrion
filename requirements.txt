@@ -8,4 +8,4 @@ openai==1.6.1
 openpyxl==3.1.2
 schedule==1.2.1
 chromedriver-autoinstaller==0.6.3
-streamlit==1.4.0
+streamlit==1.29.0
