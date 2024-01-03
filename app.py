@@ -103,7 +103,7 @@ def save_uploaded_file(uploaded_file):
     return file_path
 
 
-@st.cache_data(experimental_allow_widgets=True)    
+    
 def login_to_facebook(App_name,restuarant_name,location,nature_of_cuisine,occasion,offer,other_keywords):
     global browser
 
@@ -320,7 +320,7 @@ def login_to_facebook(App_name,restuarant_name,location,nature_of_cuisine,occasi
                     
     return browser, selected_profile
 
-@st.cache_data(experimental_allow_widgets=True)
+
 def app_creation(username, password, App_name):
     #facebook login
     selected_profile = None  # Assign a default value
