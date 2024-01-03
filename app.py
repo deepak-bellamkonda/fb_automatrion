@@ -27,7 +27,6 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 import chromedriver_autoinstaller
 
 OPENAI_API_KEY = st.secrets['OPENAI_API_KEY'] 
-System.setProperty("webdriver.chrome.driver", webDriverExec)
 chromeOptions  = ChromeOptions()
 chromeOptions.addArguments("--headless");
 chromeOptions.add_argument("--disable-notifications")
