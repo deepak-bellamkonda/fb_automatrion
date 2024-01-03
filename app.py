@@ -27,14 +27,18 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 import chromedriver_autoinstaller
 
 OPENAI_API_KEY = st.secrets['OPENAI_API_KEY'] 
-chrome_options = Options()
 
-# Add the "--headless" option to run Chrome in headless mode
-chrome_options.add_argument("--headless")
+options = Options()
+options.add_argument("--headless")
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--disable-gpu")
+options.add_argument("--disable-features=NetworkService")
+options.add_argument("--window-size=1920x1080")
+options.add_argument("--disable-features=VizDisplayCompositor")
+    return options
 
-# Set the window size
-chrome_options.add_argument("window-size=1200,1100")
-browser = webdriver.Chrome(options=chrome_options)
+browser = webdriver.Chrome(options=options)
 # Global variable to store the browser instance
 
 
