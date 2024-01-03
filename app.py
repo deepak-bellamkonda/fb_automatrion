@@ -730,7 +730,7 @@ def app_creation(username, password, App_name):
     
             return page_id, access_token
 #function for post a scheduled post containing user uploaded image 
-@st.cache_data       
+     
 def post_to_facebook_demo_schedule_file_upload(access_token, page_id, message, image_path, scheduled_datetime, selected_timezone):
     graph = facebook.GraphAPI(access_token)
 
@@ -747,7 +747,7 @@ def post_to_facebook_demo_schedule_file_upload(access_token, page_id, message, i
     
     
 #function to post scheduled post of a generated image                                    
-@st.cache_data
+
 def post_to_facebook_demo_schedule_image_url(access_token, page_id, message, image_path, scheduled_datetime, selected_timezone):
     graph = facebook.GraphAPI(access_token)
 
@@ -765,7 +765,7 @@ def post_to_facebook_demo_schedule_image_url(access_token, page_id, message, ima
     #open(image_path, 'rb')
 
 
-@st.cache_data
+
 #
 def post_to_facebook_demo_schedule(access_token, page_id, message, image_path, scheduled_datetime, selected_timezone):
     graph = facebook.GraphAPI(access_token)
@@ -782,7 +782,7 @@ def post_to_facebook_demo_schedule(access_token, page_id, message, image_path, s
     
             
             
-@st.cache_data
+
 def login_to_facebook_existing_user(App_name,restuarant_name,location,nature_of_cuisine,occasion,offer,other_keywords):
     global browser
 
@@ -915,7 +915,7 @@ def initialize_user_data():
         user_data.to_excel("user_data.xlsx", index=False)
     return user_data
 
-@st.cache_data
+
 #posting to facebook page
 def post_to_facebook_demo(access_token, page_id, message, image_path):
     image_url = image_path
@@ -940,7 +940,7 @@ def post_to_facebook_demo(access_token, page_id, message, image_path):
         
         
 #function to post the uploaded file by the user
-@st.cache_data        
+     
 def post_to_facebook_demo_file_upload(access_token, page_id, message, image_path):
     #image_url = image_path
     #image_response = requests.get(image_url)
